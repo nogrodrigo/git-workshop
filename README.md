@@ -1,5 +1,7 @@
 # Git e Github
-
+<p align='center'>
+  <img width='300' src='github/git-github.png'>
+</p>
 Sejam bem vindos ao material do workshop de git e github. Aqui estarão a explicação de conceitos do git, comandos que frequentemente são utilizados e muito mais.
 
 ## Aprenda Antes
@@ -22,6 +24,10 @@ A título de curiosidade, o comando `rm nome_pasta -rf` é equivalente a `rmdir`
 
 ## Git
 
+<p align='center'>
+  <img width='300' src='github/git.png'>
+</p>
+
 Podemos definir Git como um controle de versão. Parece uma definição válida, mas para quem não sabe o que é um controle de versão, essa explicação ainda parece muito vaga. Por isso precisamos primeiro definir o que é um controle de versão.
 
 Então o que é um controle de versão? Um controle de versão é um sistema que grava as diferentes versões dos arquivos de um projeto durante o passar do tempo. Assim o utilizador do sistema pode caminhar entre essas versões caso ele queira, veja que ocorreu alguma falha ou não gostou da nova implementação no projeto.
@@ -30,13 +36,25 @@ Fixado esse conceito, agora podemos entender melhor o que é o Git.
 
 ## Sistema Git
 
+<p align='center'>
+  <img width='600' src='github/sistema-git.png'>
+</p>
+
 O Git funciona com um sistema de snapshots. A cada versão, ele guarda todos os estados de todos os arquivos daquele momento. Por exemplo, na versão 1 foi criado o arquivo square.py e circle.py. Logo o Git irá salvar os estados desses arquivos na primeira versão. Caso seja feito alguma alteração em circle.py, ele irá guardar o novo estado desse arquivo na versão 2 e terá um link simbólico para o ultimo estado de square.py. Observe que para casos em que nao foram feitas alterações, ele nao salva de novo o estado do arquivo.
 
 ## Commit
 
+<p align='center'>
+  <img width='600' src='github/commit.png'>
+</p>
+
 Um commit é uma versão que guarda os estados de todos arquivo daquele momento. Esse conceito é muito importante para as proximas explicações. Pois em vez de utilizar a palavra versão, utilizaremos commit e seus derivados da lingua portuguesa com inglesa tipo "Commitar", "Commitou", etc.
 
 ## Ciclo de vida dos status dos arquivos
+
+<p align='center'>
+  <img width='600' src='github/lifecycle-status.png'>
+</p>
 
 Os arquivos, quando gerenciados pelo Git, Tem quatro estados:
 
@@ -127,6 +145,14 @@ Um branch é um ponteiro móvel para um commit. Ele permite que nós trabalhemos
 
 O comando `git branch nome_branch` criará umm novo branch. caso você queira saber os branchs criados, `git branch` irá lista-los. Enquanto `git branch -D nome_branch` deletará o branch. Para mudar para o branch desejado, digite `git checkout nome_branch`.
 
+<p align='center'>
+  <img width='600' src='github/branch1.png'>
+</p>
+
+<p align='center'>
+  <img width='600' src='github/branch2.png'>
+</p>
+
 Tenha em mente que o trabalho desenvolvido em cada branch é distinto. Ou seja, caso você realize um commit no branch `testing` e depois mude para o branch `master`, o commit criado em `testing` não estará no branch `master`. Então o comando `git checkout testing` realiza duas operações:
 
 1. Muda para o branch `testing`
@@ -134,16 +160,28 @@ Tenha em mente que o trabalho desenvolvido em cada branch é distinto. Ou seja, 
 
 ## Merge e Rebase
 
+<p align='center'>
+  <img width='600' src='github/branch-flow.png'>
+</p>
+
 Agora se quisermos juntar os commits de um branch com outro? Para isso existe o `merge` e o `rebase`. Os dois chegam ao mesmo objetivo, porém com abordagem diferente.
 
 O `merge` irá criar um novo commit. Esse commit contem commits do branch merged não feitos no branch atual e vice-versa. A vantagem de utiliza-lo é que ele nao bagunça o histórico, mas sua desvantagem é criar um novo commit apenas para juntar as alterações de um branch com o outro.
 
+<p align='center'>
+  <img width='600' src='github/merge-flow.png'>
+</p>
+
 Já o `rebase` moverá todos os commits feito no branch rebased para frente do branch atual. A vantagem de utiliza-lo é fato de que ele nao cria um novo commit, porém ele quebra a ordem cronológica dos commits já que move os commits para frente.
+
+<p align='center'>
+  <img width='600' src='github/rebase-flow.png'>
+</p>
 
 Suponha que no branch `testing` foram feitas alterações e elas foram commitadas. Agora você muda para o branch `master` e decide criar um merge do `testing` e `master`. Para fazer isso, digite `git merge testing`. Em uma situação em que se prefira o rebase, basta digitar `git rebase testing`.
 
 ## Referências
 
-[Curso de Git na Udemy](https://www.udemy.com/git-e-github-para-iniciantes/)
-[Documentação do Git](https://git-scm.com/docs)
-[ProGit Book](https://git-scm.com/book/en/v2)
+[Curso de Git na Udemy](https://www.udemy.com/git-e-github-para-iniciantes/)  
+[Documentação do Git](https://git-scm.com/docs)  
+[ProGit Book](https://git-scm.com/book/en/v2)  
