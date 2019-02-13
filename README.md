@@ -101,7 +101,7 @@ Para entender a reversão bem, é necessário primeiro estar sabendo o ciclo de 
 
 Suponha que você criou um arquivo. Agora o status dele é de Untracked. Adicionando ele com `git add nome_arquivo`, ele passa a ser conhecido pelo Git, mas ainda não esta em nenhuma versão. Para reverte, ou seja, coloca-lo no status de Untracked de novo, basta digitar `git rm --cache nome_arquivo`
 
-### Revertendoo arquivos em status de modified
+### Revertendo arquivos em status de modified
 
 Suponha agora que um arquivo seu esta em status de modified. Você olhou para as alterações feita nele com `git diff nome_arquivo` e não gostou. Para reverter, basta escrever `git checkout nome_arquivo`.
 
@@ -132,7 +132,7 @@ Tenha em mente que o trabalho desenvolvido em cada branch é distinto. Ou seja, 
 1. Muda para o branch `testing`
 2. Carrega as mudanças daquele branch ou remove as feitas no branch que você se encontrava antes.
 
-# Merge e Rebase
+## Merge e Rebase
 
 Agora se quisermos juntar os commits de um branch com outro? Para isso existe o `merge` e o `rebase`. Os dois chegam ao mesmo objetivo, porém com abordagem diferente.
 
@@ -142,7 +142,7 @@ Já o `rebase` moverá todos os commits feito no branch rebased para frente do b
 
 Suponha que no branch `testing` foram feitas alterações e elas foram commitadas. Agora você muda para o branch `master` e decide criar um merge do `testing` e `master`. Para fazer isso, digite `git merge testing`. Em uma situação em que se prefira o rebase, basta digitar `git rebase testing`.
 
-# Referências
+## Referências
 
 [Curso de Git na Udemy](https://www.udemy.com/git-e-github-para-iniciantes/)
 [Documentação do Git](https://git-scm.com/docs)
