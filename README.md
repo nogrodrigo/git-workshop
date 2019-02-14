@@ -101,7 +101,7 @@ Veja a opção `-m`. Ela indica que você deve passar uma mensagem ao commit. É
 
 Criado o commit, agora podemos visualizar a lista de commits com `git log`. Caso deseje filtrar por quantidade, use `git log -número`. Se preferir algo menos poluído, escreva `git log --oneline`. Agora se quiser buscar por autor, digite `git log --author='nome_autor'`. Existem diversas outras opções que podem ser vistas na [documentação](https://git-scm.com/docs/git-log).
 
-Desejando ver quais foram as mudanças feitas naquele commit, escreva `git log` e, a partir daí, aparecem os diversos commits feitos. Todos commits têm um hash(várias letras e números de forma aleatória). Esse hash é importante a realizar algumas operações no Git. Entre elas, ver o que foi alterado naquele commit. Para visualizar as mudanças feitas, basta digitar `git show hash_commit`. Mas como ver as diferenças de um arquivo que está em estado de modified. É necessário apenas escrever `git diff nome_arquivo`.
+Desejando ver quais foram as mudanças feitas naquele commit, escreva `git log` e, a partir daí, aparecem os diversos commits feitos. Todos commits têm um hash(várias letras e números de forma aleatória). Esse hash é importante a realizar algumas operações no Git. Entre elas, ver o que foi alterado naquele commit. Para visualizar as mudanças feitas, basta digitar `git show hash_commit`. Mas como ver as diferenças de um arquivo que está em estado de modified ou staged? É necessário apenas escrever `git diff nome_arquivo`.
 
 ## Revertendo
 
